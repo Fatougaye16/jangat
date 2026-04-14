@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Sankofa-inspired bird symbol for Jàngat -->
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A017"/>
+      <stop offset="100%" stop-color="#C75B39"/>
+    </linearGradient>
+  </defs>
+  <circle cx="16" cy="16" r="15" fill="#0d0d2b" stroke="url(#g)" stroke-width="1.5"/>
+  <text x="16" y="22" text-anchor="middle" font-family="Playfair Display, serif" font-size="16" font-weight="700" fill="url(#g)">J</text>
+</svg>
