@@ -140,4 +140,23 @@ const letterGroups = computed(() => {
   font-size: 0.82rem;
   padding: 32px;
 }
+
+@media (max-width: 768px) {
+  .search-input {
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  .term-card {
+    padding: 12px 14px;
+  }
+
+  .term-name {
+    font-size: 0.88rem;
+  }
+
+  .term-def {
+    font-size: 0.75rem;
+  }
+}
 </style>

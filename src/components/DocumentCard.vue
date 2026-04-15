@@ -164,4 +164,41 @@ function getPreview(content: string) {
 .doc-card:hover .card-pattern {
   opacity: 0.08;
 }
+
+/* ---- Mobile responsive ---- */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 14px;
+    gap: 6px;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-preview {
+    font-size: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .remove-btn {
+    opacity: 1;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-pattern {
+    display: none;
+  }
+}
 </style>

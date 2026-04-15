@@ -129,6 +129,12 @@ function groupByCategory(actions: { action: string; category: string; difficulty
     gap: 10px;
   }
 
+  .action-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+  }
+
   .action-text {
     font-size: 0.78rem;
   }

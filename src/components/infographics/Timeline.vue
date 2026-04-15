@@ -124,6 +124,7 @@ defineProps<{
     flex-direction: row;
     padding-left: 48px;
     padding-right: 0;
+    margin-bottom: 20px;
   }
   .timeline-node {
     left: 20px;
@@ -133,6 +134,13 @@ defineProps<{
     text-align: left;
     margin-left: 0;
     margin-right: 0;
+    padding: 14px;
+  }
+  .timeline-event {
+    font-size: 0.88rem;
+  }
+  .timeline-detail {
+    font-size: 0.78rem;
   }
 }
 </style>

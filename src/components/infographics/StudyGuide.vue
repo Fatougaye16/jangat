@@ -236,6 +236,13 @@ function resetQuiz() {
     justify-content: center;
   }
 
+  .filter-btn {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 6px 14px;
+  }
+
   .question-card {
     padding: 14px;
   }
@@ -251,6 +258,10 @@ function resetQuiz() {
 
   .q-actions {
     flex-wrap: wrap;
+  }
+
+  .q-actions .btn-ghost {
+    min-height: 40px;
   }
 }
 </style>

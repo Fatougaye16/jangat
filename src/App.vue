@@ -189,6 +189,10 @@ onMounted(() => {
 
 /* ---- Mobile responsive ---- */
 @media (max-width: 768px) {
+  .app-layout {
+    overflow-x: hidden;
+  }
+
   .sidebar {
     position: fixed;
     top: auto;
@@ -204,6 +208,7 @@ onMounted(() => {
     border-top: 1px solid rgba(255, 255, 255, 0.06);
     z-index: 100;
     padding: 0;
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   .sidebar-header,
@@ -223,10 +228,13 @@ onMounted(() => {
   .nav-item {
     flex-direction: column;
     gap: 4px;
-    padding: 10px 16px;
+    padding: 12px 0;
     border-radius: 0;
     font-size: 0.7rem;
     text-align: center;
+    min-height: 52px;
+    justify-content: center;
+    flex: 1;
   }
 
   .nav-item.active {
@@ -236,7 +244,7 @@ onMounted(() => {
 
   .main-content {
     margin-left: 0;
-    padding-bottom: 64px;
+    padding-bottom: calc(56px + env(safe-area-inset-bottom));
   }
 }
 </style>

@@ -187,11 +187,14 @@ function getNodePosition(index: number, total: number) {
 
 .map-container {
   position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .concept-svg {
   width: 100%;
   max-height: 600px;
+  min-width: 600px;
 }
 
 .concept-node {
@@ -218,21 +221,27 @@ function getNodePosition(index: number, total: number) {
     padding: 48px 16px;
   }
 
+  .generate-prompt .btn-primary {
+    width: 100%;
+  }
+
   .generating {
     padding: 48px 16px;
   }
 
   .concept-svg {
+    min-width: 400px;
     max-height: 400px;
   }
 
   .node-detail {
-    position: relative;
-    bottom: auto;
-    right: auto;
+    position: fixed;
+    bottom: calc(56px + env(safe-area-inset-bottom));
+    left: 12px;
+    right: 12px;
     max-width: 100%;
-    margin-top: 12px;
     padding: 14px;
+    z-index: 50;
   }
 }
 </style>

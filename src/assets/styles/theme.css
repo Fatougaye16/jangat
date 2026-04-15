@@ -217,3 +217,20 @@ body {
   height: 100%;
   fill: currentColor;
 }
+
+/* ---- Mobile foundation ---- */
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  .glass-card {
+    border-radius: var(--radius-md);
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    min-height: 44px;
+    font-size: 0.85rem;
+  }
+}

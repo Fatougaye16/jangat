@@ -274,8 +274,7 @@ function openDoc(id: number | undefined) {
   }
 
   .hero-mesh {
-    width: 300px;
-    height: 200px;
+    display: none;
   }
 
   .upload-section {
@@ -288,6 +287,20 @@ function openDoc(id: number | undefined) {
 
   .empty-state {
     padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-desc {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    padding: 16px 0 12px;
   }
 }
 </style>

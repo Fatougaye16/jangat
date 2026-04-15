@@ -147,4 +147,27 @@ function submit() {
   justify-content: flex-end;
   gap: 8px;
 }
+
+/* ---- Mobile responsive ---- */
+@media (max-width: 768px) {
+  .highlight-popover {
+    min-width: 0;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .color-dot {
+    width: 32px;
+    height: 32px;
+  }
+
+  .quick-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .note-input {
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
+}
 </style>

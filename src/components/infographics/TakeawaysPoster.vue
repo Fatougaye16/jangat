@@ -204,5 +204,10 @@ const adinkraSymbols = ['◆', '◇', '▲', '●', '■', '★', '◈']
   .takeaway-list {
     gap: 16px;
   }
+
+  .export-btn {
+    width: 100%;
+    min-height: 44px;
+  }
 }
 </style>

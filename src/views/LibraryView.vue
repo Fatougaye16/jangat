@@ -200,11 +200,21 @@ const typeFilters: Array<{ value: 'all' | 'pdf' | 'epub' | 'url'; label: string 
     width: 100%;
   }
 
+  .search-input {
+    font-size: 16px;
+  }
+
   .type-filters {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap;
+  }
+
+  .filter-btn {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 
   .doc-grid,
@@ -213,7 +223,11 @@ const typeFilters: Array<{ value: 'all' | 'pdf' | 'epub' | 'url'; label: string 
   }
 
   .empty {
-    padding: 48px 0;
+    padding: 48px 16px;
+  }
+
+  .empty .btn-primary {
+    width: 100%;
   }
 }
 </style>

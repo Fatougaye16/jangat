@@ -292,20 +292,83 @@ watch(messages, () => nextTick(scrollToBottom), { deep: true })
 
 /* ---- Mobile responsive ---- */
 @media (max-width: 768px) {
+  .ai-chat {
+    height: 100%;
+    min-height: 0;
+  }
+
   .chat-header {
     padding: 12px 14px;
   }
 
   .chat-messages {
     padding: 12px 14px;
+    gap: 10px;
+    overscroll-behavior: contain;
   }
 
   .chat-welcome {
-    padding: 20px 0;
+    padding: 20px 8px;
+  }
+
+  .suggestions {
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+  .suggestions::-webkit-scrollbar {
+    display: none;
+  }
+
+  .suggestion-chip {
+    padding: 12px 14px;
+    font-size: 0.78rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .chat-bubble {
+    max-width: 88%;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    word-break: break-word;
+  }
+
+  .bubble-content :deep(pre) {
+    overflow-x: auto;
+    max-width: calc(100vw - 80px);
+  }
+
+  .bubble-content :deep(code) {
+    font-size: 0.75em;
+    word-break: break-all;
   }
 
   .chat-input-area {
     padding: 10px 12px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    position: sticky;
+    bottom: 0;
+    background: rgba(13, 13, 43, 0.95);
+    backdrop-filter: blur(12px);
+  }
+
+  .chat-input {
+    font-size: 16px;
+    padding: 10px 12px;
+    min-height: 44px;
+  }
+
+  .send-btn {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
   }
 }
 </style>

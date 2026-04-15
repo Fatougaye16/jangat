@@ -238,6 +238,7 @@ function submitUrl() {
   .toggle-btn {
     flex: 1;
     justify-content: center;
+    min-height: 48px;
   }
 
   .drop-area {
@@ -252,8 +253,13 @@ function submitUrl() {
     flex-direction: column;
   }
 
+  .url-input {
+    font-size: 16px;
+  }
+
   .url-btn {
     width: 100%;
+    min-height: 48px;
   }
 }
 </style>

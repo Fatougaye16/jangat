@@ -496,6 +496,10 @@ async function exportImage() {
     padding: 16px 0;
   }
 
+  .chapter-picker h2 {
+    font-size: 0.95rem;
+  }
+
   .scope-grid {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -503,10 +507,14 @@ async function exportImage() {
 
   .scope-card {
     padding: 14px 16px;
+    min-height: 44px;
   }
 
   .scope-title {
     font-size: 0.82rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
   }
 
   .scope-bar {
@@ -522,6 +530,10 @@ async function exportImage() {
     -webkit-overflow-scrolling: touch;
     padding-bottom: 12px;
     scrollbar-width: none;
+    margin: 0 -14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    scroll-snap-type: x mandatory;
   }
   .type-selector::-webkit-scrollbar {
     display: none;
@@ -529,17 +541,58 @@ async function exportImage() {
 
   .type-btn {
     white-space: nowrap;
-    padding: 6px 12px;
+    padding: 8px 14px;
     font-size: 0.72rem;
     flex-shrink: 0;
+    min-height: 40px;
+    scroll-snap-align: start;
   }
 
   .generate-prompt {
-    padding: 40px 16px;
+    padding: 32px 16px;
+  }
+
+  .generate-prompt .font-display {
+    font-size: 0.9rem;
+  }
+
+  .generate-actions {
+    width: 100%;
+  }
+
+  .generate-actions .btn-primary,
+  .generate-actions .btn-ghost {
+    width: 100%;
+    min-height: 44px;
+    font-size: 0.85rem;
   }
 
   .generating {
     padding: 40px 16px;
+  }
+
+  .batch-progress {
+    margin: 0 0 12px;
+    padding: 10px 12px;
+  }
+
+  .batch-status {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .info-content {
+    overflow-x: hidden;
+  }
+
+  .btn-ghost.mt-4 {
+    width: 100%;
+    min-height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>

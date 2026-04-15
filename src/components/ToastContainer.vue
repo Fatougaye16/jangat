@@ -93,11 +93,21 @@ const toast = useToastStore()
 
 @media (max-width: 768px) {
   .toast-list {
-    top: 12px;
+    top: auto;
+    bottom: calc(60px + env(safe-area-inset-bottom));
     right: 12px;
     left: 12px;
     width: auto;
     max-width: none;
+  }
+
+  .toast-enter-from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .toast-leave-to {
+    opacity: 0;
+    transform: translateY(24px);
   }
 }
 </style>
