@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd())
+  const env = loadEnv(mode, process.cwd(), '')
 
   return {
     plugins: [
@@ -80,7 +80,7 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/ollama-api/, ''),
           headers: {
-            'Authorization': `Bearer ${env.VITE_OLLAMA_API_KEY || ''}`,
+            'Authorization': `Bearer ${env.OLLAMA_API_KEY || ''}`,
           },
         },
         '/api/fetch-url': {

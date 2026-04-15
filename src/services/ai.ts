@@ -1,10 +1,11 @@
 const OLLAMA_LOCAL = 'http://localhost:11434'
 const OLLAMA_PROXY = '/ollama-api'
 
-let apiKey = import.meta.env.VITE_OLLAMA_API_KEY || ''
+let apiKey = ''
 
 function getBase(): string {
-  return apiKey ? OLLAMA_PROXY : OLLAMA_LOCAL
+  if (import.meta.env.PROD || apiKey) return OLLAMA_PROXY
+  return OLLAMA_LOCAL
 }
 
 export function setApiKey(key: string) {

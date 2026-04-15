@@ -89,9 +89,11 @@ Generate visual knowledge cards from your documents, per-chapter or for the full
 
    Create a `.env` file in the project root:
    ```
-   VITE_OLLAMA_API_KEY=your_api_key_here
+   OLLAMA_API_KEY=your_api_key_here
    ```
    If running Ollama locally on the default port, no configuration is needed.
+   
+   For Netlify deployment, add `OLLAMA_API_KEY` (without the `VITE_` prefix) as an environment variable in your Netlify site settings.
 
 4. **Start the dev server**
    ```bash
