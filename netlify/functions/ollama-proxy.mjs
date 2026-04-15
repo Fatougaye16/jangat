@@ -8,7 +8,11 @@ export async function handler(event) {
     }
   }
 
-  const ollamaPath = event.path.replace('/.netlify/functions/ollama-proxy', '') || '/'
+  // Extract the path after /ollama-api from the original request
+  const rawPath = event.rawUrl
+    ? new URL(event.rawUrl).pathname
+    : event.path
+  const ollamaPath = rawPath.replace(/^\/ollama-api/, '') || '/'
   const targetUrl = `https://ollama.com${ollamaPath}`
 
   try {
